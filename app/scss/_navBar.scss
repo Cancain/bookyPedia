@@ -4,6 +4,10 @@
     color: $color4;
     grid-column: 4;
     grid-row: 1;
+
+    @include largeScreen(){
+        display: none;
+    }
 }
 
 #menuIcon {
@@ -12,6 +16,9 @@
     color: $color4;
     grid-column: 1;
     grid-row: 1;
+    @include largeScreen(){
+        display: none;
+    }
 }
 
 #searchBar {
@@ -20,6 +27,14 @@
     margin: auto auto auto auto;
     font-size: 1rem;
     width: 100%;
+
+    @include largeScreen(){
+        width: 80%;
+        // margin: auto auto auto auto;
+        grid-row: 2;
+        grid-column: 3;
+        text-align: start;
+    }
 }
 
 #searchBar > input {
@@ -48,4 +63,38 @@
     grid-row: 2;
     background: $color3;
     z-index: 3;
+}
+
+#userBarLg {
+    display: none;
+
+    @include largeScreen(){
+        margin: auto 8% auto 0;
+        display: inline;
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+}
+
+#mainNavLG {
+    display: none;
+
+    @include largeScreen(){
+        margin: auto 0 auto 0;
+        display: inline;
+        grid-column: 2/3;
+        grid-row: 2;
+    }
+    
+}
+
+#navBg {
+    grid-column: 1/5;
+    grid-row: 1;
+    background: $color3;
+
+    @include largeScreen() {
+        grid-row: 1/3;
+    }
 }

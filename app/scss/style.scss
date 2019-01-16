@@ -2,6 +2,7 @@
 @import 'grid';
 @import 'navBar';
 @import 'helpers';
+@import 'forms';
 
 *{
     margin: 0;
@@ -22,5 +23,8 @@ body {
 
 .btn {
     background: $color1;
+    border-radius: 7px;
+    border: 0;
+    padding: 0.4rem;
 }
 

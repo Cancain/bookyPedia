@@ -34,4 +34,24 @@ class Pages extends Controller{
         $this->view('pages/findAuthor', $data);
     }
 
+    public function addAuthor(){
+
+        $data = [
+            'title' => 'Add author',
+            'body' => 'This is where you add authors'
+        ];
+
+        $this->view('pages/addAuthor', $data);
+    }
+
+    public function addBook(){
+
+        $data = [
+            'title' => 'Add Book',
+            'body' => 'This is where you add Books'
+        ];
+
+        $this->view('pages/addBook', $data);
+    }
+
 }

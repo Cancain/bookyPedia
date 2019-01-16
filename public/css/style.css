@@ -2,15 +2,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 80px 1fr 1fr; }
+  @media (min-width: 768px) {
+    #mainGrid {
+      grid-template-rows: 30px 50px 1fr; } }
 
 #mainContent {
   grid-column: 1/5;
   grid-row: 2; }
-
-#navBg {
-  grid-column: 1/5;
-  grid-row: 1;
-  background: #898573; }
+  @media (min-width: 768px) {
+    #mainContent {
+      grid-row: 3; } }
 
 #userIcon {
   margin: auto 0 auto 0;
@@ -18,6 +19,9 @@
   color: #6E6C63;
   grid-column: 4;
   grid-row: 1; }
+  @media (min-width: 768px) {
+    #userIcon {
+      display: none; } }
 
 #menuIcon {
   margin: auto 0 auto 0;
@@ -25,6 +29,9 @@
   color: #6E6C63;
   grid-column: 1;
   grid-row: 1; }
+  @media (min-width: 768px) {
+    #menuIcon {
+      display: none; } }
 
 #searchBar {
   grid-column: 2/4;
@@ -32,6 +39,12 @@
   margin: auto auto auto auto;
   font-size: 1rem;
   width: 100%; }
+  @media (min-width: 768px) {
+    #searchBar {
+      width: 80%;
+      grid-row: 2;
+      grid-column: 3;
+      text-align: start; } }
 
 #searchBar > input {
   padding: 0.4rem;
@@ -56,8 +69,35 @@
   background: #898573;
   z-index: 3; }
 
+#userBarLg {
+  display: none; }
+  @media (min-width: 768px) {
+    #userBarLg {
+      margin: auto 8% auto 0;
+      display: inline;
+      grid-column: 3;
+      grid-row: 1; } }
+
+#mainNavLG {
+  display: none; }
+  @media (min-width: 768px) {
+    #mainNavLG {
+      margin: auto 0 auto 0;
+      display: inline;
+      grid-column: 2/3;
+      grid-row: 2; } }
+
+#navBg {
+  grid-column: 1/5;
+  grid-row: 1;
+  background: #898573; }
+  @media (min-width: 768px) {
+    #navBg {
+      grid-row: 1/3; } }
+
 .hNav > li {
-  display: inline; }
+  display: inline;
+  margin: 0 1.5rem 0 0; }
 
 .vNav > li {
   display: list-item;
@@ -75,6 +115,14 @@
 .hidden {
   display: none; }
 
+.formWrapper {
+  margin: 0.5rem auto 0.5rem auto; }
+
+.formWrapper > input {
+  border: 0;
+  padding: 0.4rem;
+  border-radius: 7px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -90,4 +138,7 @@ body {
   color: #BDB38F; }
 
 .btn {
-  background: #DDD0A4; }
+  background: #DDD0A4;
+  border-radius: 7px;
+  border: 0;
+  padding: 0.4rem; }
