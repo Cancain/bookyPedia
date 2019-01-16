@@ -2,10 +2,23 @@
     display: inline;    
 }
 
+.vNav > li {
+    display: list-item;
+    list-style-type: none;
+}
+
 .right {
     text-align: right;
 }
 
+.left {
+    text-align: start;
+}
+
 .center {
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }

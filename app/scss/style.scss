@@ -1,5 +1,5 @@
-@import 'config.scss';
-@import 'grid.scss';
+@import 'config';
+@import 'grid';
 @import 'navBar';
 @import 'helpers';
 
@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
@@ -17,5 +18,9 @@ a {
 body {
     background: $color4;
     color: $color2;
+}
+
+.btn {
+    background: $color1;
 }
 
