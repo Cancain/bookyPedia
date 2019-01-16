@@ -1,3 +1,16 @@
-body {
-    background: black;
+@import 'config.scss';
+@import 'grid.scss';
+@import 'navBar';
+@import 'helpers';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
 }
+
+body {
+    background: $color4;
+    color: $color2;
+}
+

@@ -9,10 +9,10 @@
 8 verbose lifecycle bookypedia@1.0.0~scss: unsafe-perm in lifecycle true
 9 verbose lifecycle bookypedia@1.0.0~scss: PATH: /usr/share/npm/bin/node-gyp-bin:/opt/lampp/htdocs/bookypedia/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 10 verbose lifecycle bookypedia@1.0.0~scss: CWD: /opt/lampp/htdocs/bookypedia
-11 silly lifecycle bookypedia@1.0.0~scss: Args: [ '-c', 'node-sass -w scss/ -o dist/css/ --recursive' ]
+11 silly lifecycle bookypedia@1.0.0~scss: Args: [ '-c', 'node-sass -w ./app/scss -o public/css/ --recursive' ]
 12 silly lifecycle bookypedia@1.0.0~scss: Returned: code: 1  signal: null
 13 info lifecycle bookypedia@1.0.0~scss: Failed to exec scss script
-14 verbose stack Error: bookypedia@1.0.0 scss: `node-sass -w scss/ -o dist/css/ --recursive`
+14 verbose stack Error: bookypedia@1.0.0 scss: `node-sass -w ./app/scss -o public/css/ --recursive`
 14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
 14 verbose stack     at emitTwo (events.js:126:13)
@@ -29,14 +29,14 @@
 19 error node v8.10.0
 20 error npm  v3.5.2
 21 error code ELIFECYCLE
-22 error bookypedia@1.0.0 scss: `node-sass -w scss/ -o dist/css/ --recursive`
+22 error bookypedia@1.0.0 scss: `node-sass -w ./app/scss -o public/css/ --recursive`
 22 error Exit status 1
-23 error Failed at the bookypedia@1.0.0 scss script 'node-sass -w scss/ -o dist/css/ --recursive'.
+23 error Failed at the bookypedia@1.0.0 scss script 'node-sass -w ./app/scss -o public/css/ --recursive'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the bookypedia package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
-23 error     node-sass -w scss/ -o dist/css/ --recursive
+23 error     node-sass -w ./app/scss -o public/css/ --recursive
 23 error You can get information on how to open an issue for this project with:
 23 error     npm bugs bookypedia
 23 error Or if that isn't available, you can get their info via:

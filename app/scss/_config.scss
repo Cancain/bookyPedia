@@ -1,0 +1,20 @@
+$color0: #A39C81;
+$color1: #DDD0A4;
+$color2: #BDB38F;
+$color3: #898573;
+$color4: #6E6C63;
+
+
+@mixin mediumScreen {
+    @media (min-width: 576px) {
+        @content;
+      }
+}
+
+@mixin largeScreen{
+    @media (min-width: 768px) {
+        @content;
+      }
+}
+
+

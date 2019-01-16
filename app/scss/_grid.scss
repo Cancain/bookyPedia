@@ -1,0 +1,20 @@
+#mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#userBar {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#mainNav {
+    grid-column: 2/4;
+    grid-row: 2;
+}
+
+#mainContent {
+    grid-column: 2/4;
+    grid-row: 3;
+}
