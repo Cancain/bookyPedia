@@ -9,6 +9,11 @@
     box-sizing: border-box; 
 }
 
+a {
+    text-decoration: none;
+    color: $color1;
+}
+
 body {
     background: $color4;
     color: $color2;

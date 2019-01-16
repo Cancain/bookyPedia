@@ -14,4 +14,24 @@ class Pages extends Controller{
         $this->view('pages/index', $data);
     }
 
+    public function findBook(){
+
+        $data = [
+            'title' => 'Find books',
+            'body' => 'This is where you find books added by other people'
+        ];
+
+        $this->view('pages/findBook', $data);
+    }
+
+    public function findAuthor(){
+
+        $data = [
+            'title' => 'Find author',
+            'body' => 'This is where you find authors added by other people'
+        ];
+
+        $this->view('pages/findAuthor', $data);
+    }
+
 }
