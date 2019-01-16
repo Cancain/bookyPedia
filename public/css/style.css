@@ -1,18 +1,10 @@
 #mainGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; }
-
-#userBar {
-  grid-column: 4;
-  grid-row: 2; }
-
-#mainNav {
-  grid-column: 1;
-  grid-row: 2; }
+  grid-template-rows: 80px 1fr 1fr; }
 
 #mainContent {
-  grid-column: 2/4;
+  grid-column: 1/5;
   grid-row: 2; }
 
 #navBg {
@@ -51,6 +43,18 @@
 
 #searchBtn {
   width: 20%; }
+
+#userBar {
+  grid-column: 1/5;
+  grid-row: 2;
+  background: #898573;
+  z-index: 3; }
+
+#mainNav {
+  grid-column: 1/5;
+  grid-row: 2;
+  background: #898573;
+  z-index: 3; }
 
 .hNav > li {
   display: inline; }

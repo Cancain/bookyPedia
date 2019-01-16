@@ -35,3 +35,17 @@
 #searchBtn{
     width: 20%;
 }
+
+#userBar {
+    grid-column: 1/5;
+    grid-row: 2;
+    background: $color3;
+    z-index: 3;
+}
+
+#mainNav {
+    grid-column: 1/5;
+    grid-row: 2;
+    background: $color3;
+    z-index: 3;
+}

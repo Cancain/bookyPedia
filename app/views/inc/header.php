@@ -15,4 +15,4 @@
 <body>
     <div id="mainGrid">
         <?php require APPROOT . '/views/inc/navBar.php'; ?> 
-        <div id="mainContent">
+        <div id="mainContent" class="center">
