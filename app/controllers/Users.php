@@ -57,7 +57,7 @@ class Users extends Controller {
                 }
             }
 
-            //Check that all errormessages are empty
+            //Check that all error messages are empty
             if(empty($data['emailErr']) && empty($data['userNameErr']) 
             && empty($data['passwordErr']) && empty($data['confirmPasswordErr'])){
 
