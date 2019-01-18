@@ -14,7 +14,7 @@ class Database{
 
     public function __construct(){
         //Set up the dsn
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $dbname;
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
         //Options for the connection
         $settings = array(
             PDO::ATTR_PERSISTENT => true,
@@ -23,7 +23,7 @@ class Database{
 
         //Makes the connection, echoes out errormessage if it fails
         try {
-            $this->connection = new PDO($dsn, $this->user, $this->pass, $options);
+            $this->connection = new PDO($dsn, $this->user, $this->pass, $settings);
         } catch (PDOException $error) {
             $this->error = $error->getMessage();
             echo $this->error;

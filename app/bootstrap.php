@@ -3,6 +3,9 @@
 //Load config
 require_once 'config/config.php';
 
+//load helpers
+require_once('helpers/urlHelpers.php');
+
 //Load libraries
 // require_once 'libraries/Controller.php';
 // require_once 'libraries/Core.php';

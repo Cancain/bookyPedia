@@ -1,6 +1,10 @@
 <?php
 class Users extends Controller {
 
+    public function __construct(){
+        $this->userModel = $this->model('User');
+    }
+
     public function register(){
         $title = 'Register';
         $body = 'This is where you register an account';
@@ -62,8 +66,11 @@ class Users extends Controller {
             && empty($data['passwordErr']) && empty($data['confirmPasswordErr'])){
 
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-                
-                die('User Added');
+                $data['confirmPassword'] = password_hash($data['confirmPassword'], PASSWORD_DEFAULT);
+
+                $this->userModel->registerUser($data);
+                redirect('users/login');
+
             } else {
                 $this->view('users/register', $data);
             }
@@ -93,7 +100,11 @@ class Users extends Controller {
 
         $data = [
             'title' => 'Login',
-            'body' => 'This is where you login to the site'
+            'body' => 'This is where you login to the site',
+            'email' => '',
+            'password' => '',
+            'emailErr' => '',
+            'passwordErr' => ''
         ];
 
         $this->view('users/login', $data);

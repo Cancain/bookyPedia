@@ -11,7 +11,8 @@
   grid-row: 2; }
   @media (min-width: 768px) {
     #mainContent {
-      grid-row: 3; } }
+      grid-row: 3;
+      grid-column: 2/4; } }
 
 #userIcon {
   margin: auto 0 auto 0;
@@ -60,12 +61,14 @@
 #userBar {
   grid-column: 1/5;
   grid-row: 2;
+  height: 100px;
   background: #898573;
   z-index: 3; }
 
 #mainNav {
   grid-column: 1/5;
   grid-row: 2;
+  height: 100px;
   background: #898573;
   z-index: 3; }
 
@@ -117,11 +120,19 @@
 
 .formWrapper {
   margin: 0.5rem auto 0.5rem auto; }
+  @media (min-width: 768px) {
+    .formWrapper {
+      text-align: start;
+      margin: 0.5rem 0 0 35%; } }
 
 .formWrapper > input {
   border: 0;
   padding: 0.4rem;
-  border-radius: 7px; }
+  border-radius: 7px;
+  width: 75vw; }
+  @media (min-width: 768px) {
+    .formWrapper > input {
+      width: 15vw; } }
 
 * {
   margin: 0;
@@ -141,4 +152,8 @@ body {
   background: #DDD0A4;
   border-radius: 7px;
   border: 0;
-  padding: 0.4rem; }
+  padding: 0.4rem;
+  margin: 0.5rem 0 0 0; }
+  @media (min-width: 768px) {
+    .btn {
+      align-self: flex-start; } }

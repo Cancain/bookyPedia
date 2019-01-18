@@ -14,6 +14,7 @@
 
     @include largeScreen(){
         grid-row: 3;
+        grid-column: 2/4;
     }
 }
 
