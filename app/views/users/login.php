@@ -5,6 +5,7 @@
 <p>
     <?php echo $data['body']?>
 </p>
+<?php flash('registerSuccess'); ?>
 
 <form action="<?php echo URLROOT?>/users/login" method="post">
     <div class="formWrapper">

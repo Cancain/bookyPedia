@@ -47,7 +47,7 @@ class Users extends Controller {
             //cannot be empty or less then 6 characters
             if(empty($data['password'])){
                 $data['passwordErr'] = 'You must enter a password';
-            } elseif(strlen($data['password'] < 6)) {
+            } elseif(strlen($data['password']) < 6) {
                 $data['passwordErr'] = 'Your password must be atleast 6 characters long';
             }
 
@@ -69,6 +69,8 @@ class Users extends Controller {
                 $data['confirmPassword'] = password_hash($data['confirmPassword'], PASSWORD_DEFAULT);
 
                 $this->userModel->registerUser($data);
+
+                flash('registerSuccess', 'You are now registered and can log in');
                 redirect('users/login');
 
             } else {

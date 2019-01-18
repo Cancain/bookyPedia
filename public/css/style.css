@@ -157,3 +157,6 @@ body {
   @media (min-width: 768px) {
     .btn {
       align-self: flex-start; } }
+
+.flashSuccess {
+  color: green; }
