@@ -4,6 +4,7 @@
 require_once 'config/config.php';
 
 //load helpers
+require_once('helpers/sessionHelpers.php');
 require_once('helpers/urlHelpers.php');
 
 //Load libraries
