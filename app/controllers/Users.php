@@ -99,6 +99,56 @@ class Users extends Controller {
     }
 
     public function login(){
+        //Check for POST
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+            //Sanetize the data
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+            //Initialize the data
+            $data = [
+                'title' => 'Login',
+                'body' => 'This is where you login to the site',
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
+                'emailErr' => '',
+                'passwordErr' => ''
+            ];
+            
+            //validate email
+            if(empty($data['email'])){
+                $data['emailErr'] = 'You have not entered an email';
+            }
+
+            //Validate password
+            if(empty($data['password'])){
+                $data['passwordErr'] = 'You have not entered a password';
+            }
+
+            if($this->userModel->findUserByEmail($data['email'])){
+                //Found user
+            } else {
+                $data['emailErr'] = 'Cannot find any user with that email';
+            }
+
+            //make sure all errors are empty
+            if(empty($data['emailErr']) && empty($data['passwordErr'])){
+
+                $loggedInUser = $this->userModel->loginUser($data['email'], $data['password']);
+                
+                if($loggedInUser){
+                    $this->setUserSession($loggedInUser);
+                } else {
+                    $data['passwordErr'] = 'Password incorrect';
+                    $this->view('users/login', $data);
+                }
+
+
+            } else {
+                $this->view('users/login', $data);
+            }
+
+        }
 
         $data = [
             'title' => 'Login',
@@ -110,5 +160,12 @@ class Users extends Controller {
         ];
 
         $this->view('users/login', $data);
+    }
+
+    public function setUserSession($user){
+        $_SESSION['userEmail'] = $user->email;
+        $_SESSION['userName'] = $user->userName;
+        $_SESSION['userId'] =  $user->id;
+        redirect('index');
     }
 }

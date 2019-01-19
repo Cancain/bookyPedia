@@ -19,4 +19,43 @@ class User {
 
         ($this->db->execute());
     }
+
+    public function findUserByEmail($email){
+        //Setting up query
+        $this->db->query('SELECT * FROM users WHERE email = :email');
+        
+        //Bind values
+        $this->db->bind(':email', $email);
+        
+        //fetch a single matching row
+        $foundUser = $this->db->fetchSingle();
+        
+
+        if($this->db->rowCount() > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function loginUser($email, $password){
+        //Setup query
+        $this->db->query('SELECT * FROM users WHERE email = :email');
+
+        //Bind values
+        $this->db->bind(':email', $email);
+
+        //Set found user to variable
+        $foundUser = $this->db->fetchSingle();
+
+        $hashedPassword = $foundUser->password;
+
+
+
+        if(password_verify($password, $hashedPassword)){
+            return $foundUser;
+        } else {
+            return false;
+        }
+    }
 }

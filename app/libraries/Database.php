@@ -49,12 +49,21 @@ class Database{
                 default:
                     $type = PDO::PARAM_STR;
             }
-        }
+        }    
         $this->stmt->bindValue($param, $value, $type);
     }
 
     public function execute(){
         $this->stmt->execute();
+    }
+
+    public function fetchSingle(){
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function rowcount(){
+        return $this->stmt->rowCount();
     }
 
 }
