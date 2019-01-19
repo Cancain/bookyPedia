@@ -11,10 +11,12 @@
 #mainContent {
     grid-column: 1/5;
     grid-row: 2;
+    text-align: center;
 
     @include largeScreen(){
         grid-row: 3;
         grid-column: 2/4;
+        text-align: start;
     }
 }
 

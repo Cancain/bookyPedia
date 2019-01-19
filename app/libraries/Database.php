@@ -62,6 +62,11 @@ class Database{
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    public function fetchMultiple(){
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
     public function rowcount(){
         return $this->stmt->rowCount();
     }

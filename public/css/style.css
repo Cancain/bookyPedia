@@ -8,11 +8,13 @@
 
 #mainContent {
   grid-column: 1/5;
-  grid-row: 2; }
+  grid-row: 2;
+  text-align: center; }
   @media (min-width: 768px) {
     #mainContent {
       grid-row: 3;
-      grid-column: 2/4; } }
+      grid-column: 2/4;
+      text-align: start; } }
 
 #userIcon {
   margin: auto 0 auto 0;
@@ -122,17 +124,20 @@
   text-align: start; }
 
 .center {
-  text-align: center; }
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  align-self: center; }
 
 .hidden {
   display: none; }
 
 .formWrapper {
-  margin: 0.5rem auto 0.5rem auto; }
+  margin: 0.5rem auto 0.5rem 0; }
   @media (min-width: 768px) {
     .formWrapper {
       text-align: start;
-      margin: 0.5rem 0 0 35%; } }
+      margin: 0.5rem auto 0.5rem 17.5%; } }
 
 .formWrapper > input {
   border: 0;
@@ -141,7 +146,22 @@
   width: 75vw; }
   @media (min-width: 768px) {
     .formWrapper > input {
-      width: 15vw; } }
+      width: 15vw;
+      margin: 0.5rem 0 0 auto; } }
+
+.formWrapper > textarea {
+  border: 0;
+  padding: 0.4rem;
+  border-radius: 7px;
+  width: 75vw; }
+  @media (min-width: 768px) {
+    .formWrapper > textarea {
+      width: 30vw;
+      margin: 0.5rem 0 0 auto; } }
+
+@media (min-width: 768px) {
+  .userForm {
+    margin: 0.5rem 0 0 35.5%; } }
 
 * {
   margin: 0;

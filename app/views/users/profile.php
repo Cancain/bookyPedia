@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'?>
-<h1>
+<h1 class="center">
     <?php echo $data['title'] ?>
 </h1>
 <p>
