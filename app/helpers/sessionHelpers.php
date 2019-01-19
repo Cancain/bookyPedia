@@ -8,21 +8,21 @@ session_start();
  *                     echo flash('NAME');
  */
 function flash($name = '', $message = '', $class = 'flashSuccess'){
-    if(!empty($name)){
+    if(!empty($name)){          
         if(!empty($message) && empty($_SESSION[$name])){
             if(!empty($_SESSION[$name])){
                 unset($_SESSION[$name]);
             }
+            
             if(!empty($_SESSION[$name . '_class'])){
                 unset($_SESSION[$name . '_class']);
             }
-
+            
             $_SESSION[$name] = $message;
-            $_SESSION[$name . '_class'];
-
-        } elseif (empty($message) && !empty($_SESSION[$name])) {
+            $_SESSION[$name . '_class'] = $class;            
+        } elseif (empty($message) && !empty($_SESSION[$name])) {            
             $class = !empty($_SESSION[$name . '_class']) ? $_SESSION[$name . '_class'] : '';
-            echo '<div class="'.$class.'" id=msgFlash">'.$_SESSION[$name].'</div>';
+            echo '<span class="'.$class.'" id=msgFlash">'.$_SESSION[$name].'</span>';
             unset($_SESSION[$name]);
             unset($_SESSION[$name . '_class']);
         }

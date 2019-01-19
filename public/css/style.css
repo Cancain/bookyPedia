@@ -159,4 +159,8 @@ body {
       align-self: flex-start; } }
 
 .flashSuccess {
-  color: green; }
+  background: green;
+  border: 7px;
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  opacity: 0.9; }
