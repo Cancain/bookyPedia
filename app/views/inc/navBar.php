@@ -57,22 +57,22 @@
 <div id="mainNav" class="hidden">
     <nav>
         <ul class="vNav center">
-            <a href="<?php echo URLROOT ?>/pages/findBook">
+            <a href="<?php echo URLROOT ?>/books/findBook">
                 <div class="vNavBg">
                     <li>Find books</li>
                 </div>
             </a>
-            <a href="<?php echo URLROOT ?>/pages/findAuthor">
+            <a href="<?php echo URLROOT ?>/authors/findAuthor">
                 <div class="vNavBg">
                     <li>Find authors</li>
                 </div>
             </a>
-            <a href="<?php echo URLROOT ?>/pages/addBook">
+            <a href="<?php echo URLROOT ?>/books/addBook">
                 <div class="vNavBg">
                     <li>Add book</li>
                 </div>
             </a>
-            <a href="<?php echo URLROOT ?>/pages/addAuthor">
+            <a href="<?php echo URLROOT ?>/authors/addAuthor">
                 <div class="vNavBg">
                     <li>Add author</li>
                 </div>
@@ -83,10 +83,10 @@
 <div id="mainNavLG" class="">
     <nav>
         <ul class="hNav center">
-            <li><a href="<?php echo URLROOT ?>/pages/findBook">Find books</a></li>
-            <li><a href="<?php echo URLROOT ?>/pages/findAuthor">Find authors</a></li>
-            <li><a href="<?php echo URLROOT ?>/pages/addBook">Add book</a></li>
-            <li><a href="<?php echo URLROOT ?>/pages/addAuthor">Add author</a></li>
+            <li><a href="<?php echo URLROOT ?>/books/findBook">Find books</a></li>
+            <li><a href="<?php echo URLROOT ?>/authors/findAuthor">Find authors</a></li>
+            <li><a href="<?php echo URLROOT ?>/books/addBook">Add book</a></li>
+            <li><a href="<?php echo URLROOT ?>/authors/addAuthor">Add author</a></li>
         </ul>
     </nav>
 </div>
