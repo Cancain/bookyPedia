@@ -34,13 +34,19 @@ class Users extends Controller {
             if(empty($data['email'])){
                 $data['emailErr'] = 'You must enter a valid email';
             } else {
-                //TODO: check for duplicate emails
+                if($this->userModel->findUserByEmail($data['email'])){
+                    $data['emailErr'] = 'Sorry, email already registered';
+                }
             }
 
             //Validate the username
             //cannot be empty
             if(empty($data['userName'])){
                 $data['userNameErr'] = 'You must enter a user name';
+            } else {
+                if($this->userModel->getUserByUserName($data['userName'])){
+                    $data['userNameErr'] = 'Sorry, that username is already taken';
+                }
             }
 
             //Validate password
@@ -167,5 +173,25 @@ class Users extends Controller {
         $_SESSION['userName'] = $user->userName;
         $_SESSION['userId'] =  $user->id;
         redirect('index');
+    }
+
+    public function profile(){
+        $user = $this->userModel->getUserById($_SESSION['userId']);
+
+        $data = [
+            'title' => $user->userName ."'s profile page",
+            'userName' => $user->userName,
+            'email' => $user->email,
+            'createdAt' => $user->createdAt
+        ];
+
+        $this->view('users/profile', $data);
+    }
+
+    public function logout(){
+        unset($_SESSION);
+        session_destroy();
+
+        redirect('users/login');
     }
 }

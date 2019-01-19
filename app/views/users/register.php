@@ -8,22 +8,22 @@
 
 <form action="<?php echo URLROOT?>/users/register" method="post">
     <div class="formWrapper">
-        <label for="email">Email</label> <br>
+        <label for="email">Email</label><sup>*</sup> <br>
         <input type="email" name="email" value="<?php echo $data['email']?>"><br>
         <span class="error"><?php echo $data['emailErr'] ?></span>
     </div>
     <div class="formWrapper">
-        <label for="userName">Username</label> <br>
+        <label for="userName">Username</label><sup>*</sup><br>
         <input type="text" name="userName" value="<?php echo $data['userName'] ?>"><br>
         <span class="error"><?php echo $data['userNameErr'] ?></span>
     </div>
     <div class="formWrapper">
-        <label for="password">Password</label> <br>
+        <label for="password">Password</label><sup>*</sup><br>
         <input type="password" name="password" value="<?php echo $data['password'] ?>"><br>
         <span class="error"><?php echo $data['passwordErr'] ?></span>
     </div>
     <div class="formWrapper">
-        <label for="ConfirmPassword">Confirm Password</label> <br>
+        <label for="ConfirmPassword">Confirm Password</label><sup>*</sup><br>
         <input type="password" name="confirmPassword" value="<?php echo $data['confirmPassword'] ?>"><br>
         <span class="error"><?php echo $data['confirmPasswordErr'] ?></span>
     </div>

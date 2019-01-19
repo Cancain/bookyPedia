@@ -58,4 +58,38 @@ class User {
             return false;
         }
     }
+
+    public function getUserById($id){
+        //Setup query
+        $this->db->query('SELECT * FROM users WHERE id = :id');
+
+        //bind the values
+        $this->db->bind(':id', $id);
+
+        //set found user to a variable
+        $foundUser = $this->db->fetchSingle();
+
+        if($foundUser){
+            return $foundUser;
+        } else {
+            return false;
+        }
+    }
+
+    public function getUserByUserName($userName){
+        //Setup query
+        $this->db->query('SELECT * FROM users WHERE userName = :userName');
+
+        //Bind the values
+        $this->db->bind(':userName', $userName);
+
+        //Set the found user to a variable
+        $foundUser = $this->db->fetchSingle();
+
+        if($foundUser){
+            return $foundUser;
+        } else {
+            return false;
+        }
+    }
 }
