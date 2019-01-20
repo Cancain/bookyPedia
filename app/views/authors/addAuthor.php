@@ -28,14 +28,12 @@
     </div>
     <div class="formWrapper">
         <label for="shortDesc">Short description</label><sup>*</sup><br>
-        <textarea name="shortDesc" id="" cols="30" rows="5">
-        <?php echo $data['shortDesc'] ?></textarea><br>
+        <textarea name="shortDesc" id="" cols="30" rows="5"><?php echo $data['shortDesc'] ?></textarea><br>
         <span class="error"><?php echo $data['shortDescErr'] ?></span>
     </div>
     <div class="formWrapper">
         <label for="longDesc">Long description</label><br>
-        <textarea name="longDesc" id="" cols="30" rows="10">
-        <?php echo $data['longDesc']?></textarea>
+        <textarea name="longDesc" id="" cols="30" rows="10"><?php echo $data['longDesc']?></textarea>
         <span class="error"></span><br>
         <input type="submit" class="btn" value="Add author">
     </div>  

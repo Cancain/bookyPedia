@@ -59,6 +59,9 @@ class Authors extends Controller{
 
                     $this->authorModel->addAuthor($data);
 
+                    flash('addAuthorSuccess', 'You successfully added an author to the page');
+                    redirect('pages/index');
+
                 } else {
                     $this->view('authors/addAuthor', $data);
                 }
