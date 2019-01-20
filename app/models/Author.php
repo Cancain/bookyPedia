@@ -21,5 +21,21 @@ class Author{
         $authors = $this->db->fetchMultiple();
         return $authors;
     }
+
+    public function addAuthor($data){
+        $this->db->query('INSERT INTO authors (firstName, lastName, alias, body, longBody, addedBy) 
+                            VALUES (:firstName, :lastName, :alias, :body, :longBody, :addedBy)');
+
+        $this->db->bind('firstName', $data['firstName']);
+        $this->db->bind('lastName', $data['lastName']);
+        $this->db->bind('alias', $data['alias']);
+        $this->db->bind('body', $data['shortDesc']);
+        $this->db->bind('longBody', $data['longDesc']);
+        $this->db->bind('addedBy', $_SESSION['userId']);
+
+        $this->db->execute();
+
+
+    }
 }
     
