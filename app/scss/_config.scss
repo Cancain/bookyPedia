@@ -12,7 +12,7 @@ $color4: #6E6C63;
 }
 
 @mixin largeScreen{
-    @media (min-width: 768px) {
+    @media (min-width: 975px) {
         @content;
       }
 }

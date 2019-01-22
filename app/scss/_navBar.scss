@@ -37,14 +37,11 @@
     }
 }
 
-#searchBar > input {
+#searchField {
+    width: 75%;
     padding: 0.4rem;
     border-radius: 0.5rem;
     border: 0;
-}
-
-#searchField {
-    width: 75%;
 }
 
 #searchBtn{

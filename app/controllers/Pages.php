@@ -1,7 +1,7 @@
 <?php
 class Pages extends Controller{
     public function __construct(){
-        
+        $this->pageModel = $this->model('Page');
     }
 
     public function index(){
@@ -12,5 +12,13 @@ class Pages extends Controller{
         ];
 
         $this->view('pages/index', $data);
+    }
+
+    public function search(){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $data = $this->pageModel->searchAuthorsAndBooks($_POST['search']);
+
+            $this->view('pages/search', $data);
+        }
     }
 }

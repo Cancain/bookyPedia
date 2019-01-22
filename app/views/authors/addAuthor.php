@@ -39,7 +39,7 @@
     </div>  
 </form>
 <? else: ?>
-<p>You need to login to add authors or books. <br>
+<p class="center"> You need to login to add authors or books. <br>
 Please <a href="<?php echo URLROOT ?>/users/login">Log in</a> or <a href="<?php echo URLROOT ?>/users/register">Register</a></p>
 
 <?php endif; ?>

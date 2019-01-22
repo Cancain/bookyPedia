@@ -3,7 +3,8 @@
 <p class="center"><?php echo $data['body']?></p>
 
 <?php foreach ($data['authors'] as $author) :?>
-<h1><?php echo $author->firstName . ' ' . $author->lastName?></h1>
+<a href="<?php echo URLROOT ?>/authors/show/<?php echo $author->authorId ?>"><h2><?php echo $author->lastName . ', ' . $author->firstName?></h2></a>
+<p><?php if($author->alias) echo 'Alias: ' . $author->alias ?></p>
 <p><?php echo $author->body?></p>
 <small><?php echo 'Added by: '.$author->userName?></small>
 

@@ -2,7 +2,7 @@
     margin: 0.5rem auto 0.5rem 0;
     @include largeScreen(){
         text-align: start;
-        margin: 0.5rem auto 0.5rem 17.5%;
+        margin: 0.5rem auto 0.5rem 27.5%;
     }
 }
 
@@ -27,9 +27,20 @@
     }
 }
 
+.formWrapper > select {
+    border: 0;
+    padding: 0.4rem;
+    border-radius: 7px;
+    width: 75vw;
+    @include largeScreen(){
+        width: 15vw;
+        margin: 0.5rem 0 0 auto;
+    }
+}
+
 .userForm {
     @include largeScreen(){
-        margin: 0.5rem 0 0 35.5%;
+        margin: 0.5rem 0 0 38.5%;
     }
 }
 

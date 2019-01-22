@@ -51,8 +51,10 @@
 </div>
 <?php endif; ?>
 <div id="searchBar" class="center">
-    <input id="searchField" type="text" placeholder="Search" name="" id="">
-    <input id="searchBtn" class="btn" type="button" value="Go">
+    <form action="<?php echo URLROOT?>/pages/search" method="POST">
+        <input id="searchField" type="text" placeholder="Search" name="search" id="">
+        <input id="searchBtn" class="btn" name="searchBtn" type="submit" value="Go">
+    </form>
 </div>
 <div id="mainNav" class="hidden">
     <nav>
@@ -82,7 +84,7 @@
 </div>
 <div id="mainNavLG" class="">
     <nav>
-        <ul class="hNav center">
+        <ul class="hNav center pronunced">
             <li><a href="<?php echo URLROOT ?>/books/findBook">Find books</a></li>
             <li><a href="<?php echo URLROOT ?>/authors/findAuthor">Find authors</a></li>
             <li><a href="<?php echo URLROOT ?>/books/addBook">Add book</a></li>
